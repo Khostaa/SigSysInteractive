@@ -6,7 +6,7 @@
 export default {
   "title": "Sig Sys",
   "tagline": "Where Signals Meet Systems",
-  "favicon": "img/favicon.ico",
+  "favicon": "img/logo.png",
   "url": "https://your-docusaurus-site.example.com",
   "baseUrl": "/",
   "organizationName": "facebook",
@@ -26,6 +26,12 @@ export default {
       "classic",
       {
         "docs": {
+          "remarkPlugins": [
+            null
+          ],
+          "rehypePlugins": [
+            null
+          ],
           "sidebarPath": "./sidebars.ts",
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
@@ -35,13 +41,21 @@ export default {
       }
     ]
   ],
+  "stylesheets": [
+    {
+      "href": "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      "type": "text/css",
+      "integrity": "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      "crossorigin": "anonymous"
+    }
+  ],
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
       "title": "Sig Sys",
       "logo": {
         "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "src": "img/logo.png"
       },
       "items": [
         {
@@ -62,11 +76,11 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Docs",
+          "title": "Book",
           "items": [
             {
               "label": "Book",
-              "to": "/docs/intro"
+              "to": "/docs/introduction/intro"
             }
           ]
         },
@@ -344,7 +358,6 @@ export default {
   "themes": [],
   "scripts": [],
   "headTags": [],
-  "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
   "noIndex": false,
